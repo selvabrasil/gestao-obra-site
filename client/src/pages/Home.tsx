@@ -97,6 +97,7 @@ export default function Home() {
             <a className="nav-link" href="#recursos">Recursos</a>
             <a className="nav-link" href="#categorias">Categorias</a>
             <a className="nav-link" href="#seguranca">Segurança</a>
+            <a className="nav-link" href="#politica">Política</a>
           </nav>
 
           <a href="#recursos" className="btn-compact group">
@@ -322,6 +323,67 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="politica" className="relative overflow-hidden bg-[#fbf8f2] py-24 sm:py-32">
+          <div className="absolute inset-0 technical-grid opacity-25" />
+          <div className="container relative">
+            <div className="lg:pl-[8%]">
+              <SectionTag>Política de Privacidade</SectionTag>
+              <div className="mt-6 grid gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:gap-20">
+                <div>
+                  <h2 className="max-w-[440px] font-display text-5xl font-bold leading-[0.9] tracking-[-0.065em] text-[#173f46] sm:text-6xl">
+                    Transparência também <span className="text-[#e8683f]">faz parte da obra.</span>
+                  </h2>
+                  <p className="mt-6 max-w-[420px] text-lg leading-relaxed text-[#537176]">
+                    Esta política descreve como o GestãoObra trata as informações registradas no aplicativo. A versão abaixo é aplicável ao uso atual, com armazenamento local no aparelho.
+                  </p>
+                  <p className="mt-8 border-l-2 border-[#e8683f] pl-4 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-[#61777a]">
+                    Última atualização: 18 de agosto de 2026
+                  </p>
+                </div>
+
+                <article className="policy-sheet">
+                  <div className="policy-sheet__topline"><span>GESTÃOOBRA / PRIVACIDADE</span><span>LOCAL · ANDROID</span></div>
+                  <div className="policy-content">
+                    <section>
+                      <h3>1. Informações abrangidas</h3>
+                      <p>O GestãoObra permite que você registre dados relacionados à sua construção, como nome da obra, lançamentos de materiais, mão de obra e custos indiretos, valores, datas, observações e contatos de prestadores ou fornecedores inseridos por você.</p>
+                    </section>
+                    <section>
+                      <h3>2. Onde os dados ficam</h3>
+                      <p>As informações registradas são salvas localmente no aparelho em que o aplicativo é utilizado. O funcionamento descrito para a versão atual não depende de conta de usuário nem de armazenamento em nuvem operado pelo GestãoObra.</p>
+                    </section>
+                    <section>
+                      <h3>3. Uso das informações</h3>
+                      <p>Os dados são utilizados no próprio aplicativo para organizar lançamentos, calcular totais, montar relatórios, exibir gráficos e manter os contatos associados à obra. O GestãoObra não usa esses registros para publicidade ou para formar perfis comerciais.</p>
+                    </section>
+                    <section>
+                      <h3>4. Exportação e transferência</h3>
+                      <p>Você pode exportar relatórios em <strong>.csv</strong> e o banco de dados em <strong>.db</strong>. A decisão de exportar, guardar, enviar ou importar esses arquivos em outro aparelho é sua. Proteja esses arquivos, pois eles podem conter os registros da sua obra.</p>
+                    </section>
+                    <section>
+                      <h3>5. Compartilhamento</h3>
+                      <p>O GestãoObra não compartilha automaticamente os dados cadastrados com terceiros. O compartilhamento acontece apenas quando você escolhe exportar um arquivo ou utilizar as funções de compartilhamento disponibilizadas pelo seu próprio dispositivo.</p>
+                    </section>
+                    <section>
+                      <h3>6. Seus controles</h3>
+                      <p>Você pode revisar, editar ou excluir os lançamentos diretamente no aplicativo. Como os dados são locais, a remoção do aplicativo, a limpeza de dados ou a perda do aparelho podem eliminar informações que não tenham sido exportadas previamente.</p>
+                    </section>
+                    <section>
+                      <h3>7. Atualizações desta política</h3>
+                      <p>Esta política pode ser atualizada quando houver mudanças relevantes nas funcionalidades ou no tratamento de dados. A versão vigente permanecerá disponível nesta aba, com a data da última atualização.</p>
+                    </section>
+                    <section>
+                      <h3>8. Contato</h3>
+                      <p>Para dúvidas sobre privacidade ou sobre o uso do aplicativo, utilize o canal de suporte informado na página de distribuição do GestãoObra.</p>
+                    </section>
+                  </div>
+                  <div className="policy-sheet__note"><LockKeyhole className="h-4 w-4" /> Armazenamento local. Controle do usuário.</div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="relative overflow-hidden bg-[#fbf8f2] py-24 sm:py-28">
           <div className="absolute inset-0 technical-grid opacity-30" />
           <div className="container relative">
@@ -354,6 +416,7 @@ export default function Home() {
           <div className="border-l border-[#a8c3c3]/25 pl-5 font-mono text-[10px] uppercase tracking-[0.14em] text-[#a8c3c3]">
             <p>GestãoObra</p>
             <p className="mt-2 text-[#f3a067]">Dados locais · Android</p>
+            <a href="#politica" className="mt-4 inline-flex text-[#f8f2e9] underline decoration-[#f3a067] decoration-2 underline-offset-4 transition-colors hover:text-[#f3a067]">Política de Privacidade</a>
           </div>
         </div>
       </footer>
