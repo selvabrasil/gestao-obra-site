@@ -48,6 +48,26 @@ const indirectCategories = [
   "Outros",
 ];
 
+const isGitHubPagesBuild = import.meta.env.VITE_GITHUB_PAGES === "true";
+const githubPagesAssetBase = import.meta.env.BASE_URL;
+const appAssets = isGitHubPagesBuild
+  ? {
+      logo: `${githubPagesAssetBase}site-assets/gestao-obra-logo.png`,
+      hero: `${githubPagesAssetBase}site-assets/gestao-obra-hero.jpg`,
+      categories: `${githubPagesAssetBase}site-assets/gestao-obra-categorias.jpg`,
+      privacy: `${githubPagesAssetBase}site-assets/gestao-obra-privacidade.jpg`,
+      summary: `${githubPagesAssetBase}site-assets/tela-resumo-app.jpeg`,
+      report: `${githubPagesAssetBase}site-assets/tela-relatorio-app.jpeg`,
+    }
+  : {
+      logo: "/manus-storage/gestao-obra-logo_e73fa381.png",
+      hero: "/manus-storage/gestao-obra-hero_40010623.jpg",
+      categories: "/manus-storage/gestao-obra-categorias_5c1e4259.jpg",
+      privacy: "/manus-storage/gestao-obra-privacidade_0bd4ffbb.jpg",
+      summary: "/manus-storage/tela-resumo-app_0b21f99d.jpeg",
+      report: "/manus-storage/tela-relatorio-app_26ff137f.jpeg",
+    };
+
 function SectionTag({ children, tone = "light" }: { children: React.ReactNode; tone?: "light" | "dark" }) {
   return (
     <p
@@ -83,7 +103,7 @@ export default function Home() {
         <div className="container flex h-[72px] items-center justify-between gap-6">
           <a href="#inicio" className="group flex shrink-0 items-center gap-3" aria-label="Gestão Obra — início">
             <img
-              src="/manus-storage/gestao-obra-logo_e73fa381.png"
+              src={appAssets.logo}
               alt="Símbolo Gestão Obra"
               className="h-10 w-10 object-contain transition-transform duration-200 group-hover:-rotate-6"
             />
@@ -110,7 +130,7 @@ export default function Home() {
         <section id="inicio" className="relative isolate min-h-[720px] overflow-hidden border-b border-[#173f46]/10 lg:min-h-[760px]">
           <div className="absolute inset-0 technical-grid opacity-[0.32]" />
           <img
-            src="/manus-storage/gestao-obra-hero_40010623.jpg"
+            src={appAssets.hero}
             alt="Celular sobre materiais e planta arquitetônica"
             className="absolute right-0 top-0 h-full w-full object-cover object-[72%_center] opacity-70 lg:w-[74%]"
           />
@@ -150,7 +170,7 @@ export default function Home() {
                   <p className="mt-1 font-display text-base font-bold text-[#173f46]">total + categorias</p>
                 </div>
                 <PhoneFrame
-                  src="/manus-storage/tela-resumo-app_0b21f99d.jpeg"
+                  src={appAssets.summary}
                   alt="Tela inicial do aplicativo GestãoObra, com total gasto e categorias de custos"
                   className="relative z-10 h-full w-full rotate-[3deg]"
                 />
@@ -217,7 +237,7 @@ export default function Home() {
 
         <section id="categorias" className="relative overflow-hidden bg-[#f6f0e7] py-24 sm:py-32">
           <div className="absolute inset-y-0 right-0 hidden w-[39%] lg:block">
-            <img src="/manus-storage/gestao-obra-categorias_5c1e4259.jpg" alt="Materiais e elementos de construção organizados" className="h-full w-full object-cover" />
+            <img src={appAssets.categories} alt="Materiais e elementos de construção organizados" className="h-full w-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#f6f0e7] via-[#f6f0e7]/30 to-transparent" />
           </div>
           <div className="container relative">
@@ -272,7 +292,7 @@ export default function Home() {
                   <p className="font-mono text-[9px] font-bold uppercase tracking-[0.15em]">Visão clara</p>
                   <p className="mt-1 font-display text-sm font-bold">do total à subcategoria</p>
                 </div>
-                <PhoneFrame src="/manus-storage/tela-relatorio-app_26ff137f.jpeg" alt="Tela de relatório do GestãoObra, com gráfico de custos e detalhamento" className="relative z-10 h-full w-full -rotate-[3deg]" />
+                <PhoneFrame src={appAssets.report} alt="Tela de relatório do GestãoObra, com gráfico de custos e detalhamento" className="relative z-10 h-full w-full -rotate-[3deg]" />
               </div>
 
               <div className="max-w-[640px]">
@@ -313,7 +333,7 @@ export default function Home() {
               </div>
               <div className="relative mx-auto w-full max-w-[440px]">
                 <div className="absolute -left-10 -top-10 h-32 w-32 border border-[#173f46]/25" />
-                <img src="/manus-storage/gestao-obra-privacidade_0bd4ffbb.jpg" alt="Celular e chave representando privacidade de dados" className="relative z-10 aspect-[4/5] w-full object-cover shadow-[18px_18px_0_#173f46]" />
+                <img src={appAssets.privacy} alt="Celular e chave representando privacidade de dados" className="relative z-10 aspect-[4/5] w-full object-cover shadow-[18px_18px_0_#173f46]" />
                 <div className="absolute -bottom-7 -left-5 z-20 bg-[#f8f2e9] px-5 py-4 shadow-[6px_6px_0_#e8683f]">
                   <p className="font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-[#e8683f]">Sem nuvem</p>
                   <p className="mt-1 font-display text-lg font-bold tracking-[-0.04em] text-[#173f46]">Controle que fica com você.</p>
@@ -408,7 +428,7 @@ export default function Home() {
         <div className="container flex flex-col gap-10 py-12 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <div className="flex items-center gap-3">
-              <img src="/manus-storage/gestao-obra-logo_e73fa381.png" alt="Símbolo Gestão Obra" className="h-11 w-11" />
+              <img src={appAssets.logo} alt="Símbolo Gestão Obra" className="h-11 w-11" />
               <div><p className="font-mono text-[10px] font-bold tracking-[0.18em] text-[#f3a067]">GESTÃO</p><p className="font-display text-2xl font-bold tracking-[-0.06em] text-white">obra</p></div>
             </div>
             <p className="mt-5 max-w-[360px] text-sm leading-relaxed text-[#a8c3c3]">Controle de custos de construção para Android. Registre, organize e entenda cada etapa do seu investimento.</p>
