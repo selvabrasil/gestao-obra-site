@@ -10,3 +10,11 @@
 - [x] Criar um pacote estático autossuficiente para envio à branch de publicação.
 - [x] Documentar a atualização manual e a ativação do GitHub Pages no repositório.
 - [x] Validar a compilação de produção para o GitHub Pages.
+
+# Repositório GitHub e GitHub Pages
+
+- [x] Confirmar o nome e a visibilidade do repositório compatíveis com o GitHub Pages.
+- [x] Criar o repositório e enviar o código-fonte no branch principal.
+- [x] Registrar a URL remota do repositório criado na configuração local.
+- [x] Gerar e enviar a branch `gh-pages` com o pacote estático.
+- [ ] Informar o endereço do repositório e o passo de ativação do GitHub Pages.
