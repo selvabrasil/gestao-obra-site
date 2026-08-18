@@ -21,6 +21,6 @@
 
 # Correção do GitHub Pages
 
-- [ ] Verificar a fonte de publicação, a URL configurada e o status do GitHub Pages.
-- [ ] Corrigir a configuração ou o conteúdo da branch de publicação, se necessário.
-- [ ] Confirmar o carregamento do endereço público do site.
+- [x] Verificar a fonte de publicação, a URL configurada e o status do GitHub Pages.
+- [x] Corrigir a configuração ou o conteúdo da branch de publicação, se necessário.
+- [x] Confirmar o carregamento do endereço público do site.
