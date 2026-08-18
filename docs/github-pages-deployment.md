@@ -4,6 +4,8 @@
 
 O projeto foi preparado para gerar um pacote estático e autossuficiente em `dist/public`. Esse pacote contém HTML, JavaScript, estilos e todas as imagens usadas no site. Para atualizar a versão pública, gere o pacote novamente e envie o conteúdo dessa pasta para a branch de publicação.
 
+Para este repositório, a versão pública é servida em `https://selvabrasil.github.io/gestao-obra-site/`. A compilação considera esse caminho-base para que a página inicial e os ativos sejam encontrados corretamente.
+
 > O pacote produzido por `pnpm build:pages` não deve ser editado manualmente. Faça alterações nos arquivos do projeto e gere uma nova versão antes de cada atualização.
 
 ## Publicação inicial

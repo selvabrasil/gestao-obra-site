@@ -18,3 +18,9 @@
 - [x] Registrar a URL remota do repositório criado na configuração local.
 - [x] Gerar e enviar a branch `gh-pages` com o pacote estático.
 - [ ] Informar o endereço do repositório e o passo de ativação do GitHub Pages.
+
+# Correção do GitHub Pages
+
+- [ ] Verificar a fonte de publicação, a URL configurada e o status do GitHub Pages.
+- [ ] Corrigir a configuração ou o conteúdo da branch de publicação, se necessário.
+- [ ] Confirmar o carregamento do endereço público do site.

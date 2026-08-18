@@ -30,7 +30,7 @@ const index = await readFile(indexPath, "utf8");
 const staticIndex = index.replace(
   "/manus-storage/gestao-obra-logo_e73fa381.png",
   "./site-assets/gestao-obra-logo.png",
-);
+).replace(/\s*<script\s+src="\/__manus__\/debug-collector\.js"\s+defer><\/script>/, "");
 
 await Promise.all([
   writeFile(indexPath, staticIndex, "utf8"),
