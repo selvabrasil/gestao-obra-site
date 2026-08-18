@@ -1,26 +1,11 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/NotFound";
-import { Route, Router as WouterRouter, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 
-/** Direção visual: Caderno de Obra Editorial — o roteador preserva a navegação simples do site estático. */
-const routerBase = import.meta.env.BASE_URL === "/" ? "/" : import.meta.env.BASE_URL.replace(/\/$/, "");
-
-function Router() {
-  return (
-    <WouterRouter base={routerBase}>
-      <Switch>
-        <Route path={"/"} component={Home} />
-        <Route path={"/404"} component={NotFound} />
-        {/* Final fallback route */}
-        <Route component={NotFound} />
-      </Switch>
-    </WouterRouter>
-  );
-}
+/** Direção visual: Caderno de Obra Editorial — landing page estática de página única, compatível com subdiretórios. */
+function SiteContent() { return <Home />; }
 
 // NOTE: About Theme
 // - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
@@ -36,7 +21,7 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
-          <Router />
+          <SiteContent />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
